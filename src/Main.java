@@ -3,11 +3,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int i,j,kolS;
-        int q = 0-1;
         boolean l,r,u,d,marker=false;
         boolean[][] field = new boolean[101][101];
         Scanner read = new Scanner(System.in);
-        String str = read.nextLine();
+        String str = read.next();
         i = j = 50;
         kolS=0;
         field[i][j]=true;
@@ -15,7 +14,8 @@ public class Main {
         d=false;
         l=false;
         r=false;
-        for(int k=0;k<str.length()-1;k++)
+        int tmp = str.length();
+        for(int k=0;k<str.length();k++)
         {
             if (str.charAt(k)=='S'){
                 if (u) i--;
@@ -65,7 +65,7 @@ public class Main {
 
         }
         if(!marker)
-            System.out.println(q);
+            System.out.println(-1);
 
     }
 }
